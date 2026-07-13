@@ -52,13 +52,13 @@ const CONFIG = {
        Data Folder
     =========================== */
 
-    DATA_PATH : "data/",
+DATA_PATH : "./data/",
 
-    QUESTION_PATH : "data/question/",
+QUESTION_PATH : "./data/Question/",
 
-    CASE_PATH : "data/case/",
+CASE_PATH : "./data/Case/",
 
-    LIST_PATH : "data/list/",
+// LIST_PATH : "./data/List/",
 
     /* ===========================
        Question CSV
