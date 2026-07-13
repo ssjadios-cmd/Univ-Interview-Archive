@@ -19,7 +19,7 @@ async function loadCaseData() {
     }
     
     // 경로 끝에 슬래시가 중복되거나 누락되는 문제를 방지하는 정형화 코드
-    let basePath = CONFIG.CASE_PATH || "data/case/";
+    let basePath = CONFIG.CASE_PATH || "data/Case/";
     if (!basePath.endsWith("/")) basePath += "/";
 
     for (const fileName of files) {
