@@ -1,0 +1,614 @@
+/* ==========================================
+   Global
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:
+        "Malgun Gothic",
+        "Noto Sans KR",
+        sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    font-size:var(--font-md);
+
+}
+
+
+/* ==========================================
+   App
+========================================== */
+
+#app{
+
+    max-width:var(--app-max-width);
+
+    margin:auto;
+
+    min-height:100vh;
+
+}
+
+
+/* ==========================================
+   Header
+========================================== */
+
+#header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:var(--z-header);
+
+    background:var(--surface);
+
+    border-bottom:1px solid var(--border);
+
+    height:var(--header-height);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 var(--space-lg);
+
+}
+
+
+#header h1{
+
+    font-size:var(--font-lg);
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+
+/* ==========================================
+   Tabs
+========================================== */
+
+#tabs{
+
+    position:sticky;
+
+    top:var(--header-height);
+
+    z-index:var(--z-header);
+
+    background:white;
+
+    display:flex;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+
+.tab{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:15px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+
+.tab:hover{
+
+    background:var(--primary-light);
+
+}
+
+
+.tab.active{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+/* ==========================================
+   Search Panel
+========================================== */
+
+#searchPanel{
+
+    background:white;
+
+    margin:20px;
+
+    border-radius:var(--radius-md);
+
+    box-shadow:var(--shadow-sm);
+
+    padding:20px;
+
+}
+
+
+.search-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+.search-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.search-item label{
+
+    margin-bottom:8px;
+
+    color:var(--subtext);
+
+    font-size:var(--font-sm);
+
+}
+
+
+.search-item input,
+.search-item select{
+
+    padding:10px;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-sm);
+
+    font-size:var(--font-md);
+
+}
+
+
+.search-item input:focus,
+.search-item select:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+}
+
+
+/* ==========================================
+   Search Button
+========================================== */
+
+.search-button{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-top:20px;
+
+}
+
+
+.search-button button{
+
+    padding:
+
+        10px 30px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    border-radius:var(--radius-sm);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+
+.search-button button:hover{
+
+    opacity:.9;
+
+}
+
+
+/* ==========================================
+   Result Area
+========================================== */
+
+#resultArea{
+
+    margin:10px 20px;
+
+}
+
+
+.result-summary{
+
+    margin-bottom:20px;
+
+    color:var(--subtext);
+
+}
+
+
+.result-card{
+
+    background:white;
+
+    border-radius:var(--radius-md);
+
+    box-shadow:var(--shadow-sm);
+
+    padding:10px;
+
+    margin-bottom:10px;
+
+    transition:var(--transition);
+
+}
+
+
+.result-card:hover{
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+.result-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+}
+
+
+.result-title{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+.result-sub{
+
+    color:var(--subtext);
+
+    margin-bottom:15px;
+
+}
+
+
+/* ==========================================
+   Pagination
+========================================== */
+
+.pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin:40px 0;
+
+}
+
+
+.pagination button{
+
+    padding:8px 14px;
+
+    border:1px solid var(--border);
+
+    background:white;
+
+    cursor:pointer;
+
+}
+
+
+.pagination button.active{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* 페이지네이션 스타일 예시 */
+.pageButton.nav-btn {
+    font-weight: bold;
+    background-color: #f8f9fa;
+    color: #555;
+}
+
+.pageButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+    background-color: #eaeded;
+}
+
+
+/* ==========================================
+   Footer
+========================================== */
+
+#footer{
+
+    margin-top:40px;
+
+    border-top:1px solid var(--border);
+
+    text-align:center;
+
+    color:var(--subtext);
+
+    padding:20px;
+
+}
+
+.result-card{
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:14px 16px;
+
+    margin-bottom:10px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+    border-left:6px solid #1976d2;
+
+}
+
+.result-title{
+
+    font-size:20px;
+
+    margin-bottom:10px;
+
+}
+
+.result-info{
+
+    display:flex;
+
+    gap:24px;
+
+    margin-bottom:10px;
+
+    font-size:15px;
+
+    color:#555;
+
+}
+
+.result-info:first-child strong{
+
+    color:#1565c0;
+
+    font-size:18px;
+
+}
+
+
+.result-question{
+
+    margin-top:1px;
+
+    padding-top:1px;
+
+    border-top:1px solid #e5e5e5;
+    line-height:1.6;
+
+    font-size:16px;
+
+    white-space:pre-wrap;
+
+}
+
+.info-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:4px;
+
+}
+
+.university strong,
+.major strong{
+
+    font-size:18px;
+
+    color:#1565c0;
+
+}
+
+.card-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:8px;
+
+}
+
+.select-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:14px;
+
+    color:#666;
+
+    cursor:pointer;
+
+}
+
+.select-box input{
+
+    cursor:pointer;
+
+}
+
+.cart-toolbar{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.cart-toolbar button{
+
+    padding:8px 16px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#1976d2;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.cart-toolbar button:hover{
+
+    opacity:.9;
+
+}
+
+.card-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+}
+
+.cart-select{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+.deleteButton{
+
+    background:#e53935;
+
+    color:white;
+
+    border:none;
+
+    border-radius:6px;
+
+    padding:6px 12px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+/* 💡 장바구니 및 검색 결과 카드 내부 여백 대폭 축소 */
+.result-card, .cart-card, .cart-item { 
+    padding: 10px 15px !important; /* 카드 내부 안쪽 여백을 촘촘하게 줄임 */
+    margin-bottom: 10px !important; /* 카드와 카드 사이 간격 축소 */
+}
+
+/* 카드 상단 정보 영역(대학명, 모집단위 등) 간격 축소 */
+.result-info, .card-info {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+}
+
+/* 질문 내용이 들어가는 박스의 여백 조절 */
+.result-question, .cart-question {
+    margin-top: 8px !important;
+    padding: 5px 0 !important;
+    line-height: 1.4 !important; /* 줄간격을 컴팩트하게 설정 */
+    font-size: 14px !important;
+}
+
+/* 구분선이 있다면 공백 최소화 */
+hr {
+    margin: 6px 0 !important;
+    opacity: 0.5;
+}

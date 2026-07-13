@@ -1,0 +1,193 @@
+/* ==========================================
+   Tablet
+========================================== */
+
+@media (max-width:1200px){
+
+    .search-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width:768px){
+
+    /* ---------- Header ---------- */
+
+    #header{
+
+        height:auto;
+
+        padding:15px;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+
+    #header h1{
+
+        font-size:22px;
+
+    }
+
+
+    /* ---------- Tabs ---------- */
+
+    #tabs{
+
+        top:auto;
+
+        position:relative;
+
+    }
+
+    .tab{
+
+        font-size:14px;
+
+        padding:12px 6px;
+
+    }
+
+
+    /* ---------- Search ---------- */
+
+    #searchPanel{
+
+        margin:10px;
+
+        padding:15px;
+
+    }
+
+
+    .search-grid{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+
+    .search-item label{
+
+        font-size:13px;
+
+    }
+
+
+    .search-item input,
+    .search-item select{
+
+        font-size:15px;
+
+    }
+
+
+    .search-button{
+
+        justify-content:center;
+
+    }
+
+
+    .search-button button{
+
+        width:100%;
+
+    }
+
+
+    /* ---------- Result ---------- */
+
+    #resultArea{
+
+        margin:10px;
+
+    }
+
+
+    .result-card{
+
+        padding:10px;
+
+    }
+
+
+    .result-header{
+
+        flex-direction:column;
+
+        gap:6px;
+
+    }
+
+
+    .result-title{
+
+        font-size:17px;
+
+    }
+
+
+    .result-sub{
+
+        font-size:14px;
+
+    }
+
+
+    /* ---------- Pagination ---------- */
+
+    .pagination{
+
+        flex-wrap:wrap;
+
+        gap:6px;
+
+    }
+
+}
+
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media (max-width:480px){
+
+    body{
+
+        font-size:14px;
+
+    }
+
+    #header h1{
+
+        font-size:20px;
+
+    }
+
+    .tab{
+
+        font-size:13px;
+
+        padding:10px 4px;
+
+    }
+
+}

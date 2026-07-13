@@ -1,0 +1,127 @@
+/* ==========================================
+   대구고 대입 면접 아카이브
+   Release 0.2
+   Global Variables
+========================================== */
+
+:root{
+
+    /* ===========================
+       Program
+    =========================== */
+
+    --app-max-width:1600px;
+
+    --header-height:64px;
+
+    --tab-height:52px;
+
+    --search-width:320px;
+
+    --footer-height:48px;
+
+
+
+    /* ===========================
+       Color
+    =========================== */
+
+    --primary:#1565C0;
+
+    --primary-light:#E3F2FD;
+
+    --background:#F5F7FA;
+
+    --surface:#FFFFFF;
+
+    --border:#DADCE0;
+
+    --text:#202124;
+
+    --subtext:#5F6368;
+
+    --danger:#D93025;
+
+    --success:#188038;
+
+
+
+    /* ===========================
+       Radius
+    =========================== */
+
+    --radius-xs:4px;
+
+    --radius-sm:8px;
+
+    --radius-md:12px;
+
+    --radius-lg:18px;
+
+
+
+    /* ===========================
+       Shadow
+    =========================== */
+
+    --shadow-sm:0 1px 3px rgba(0,0,0,.08);
+
+    --shadow-md:0 4px 10px rgba(0,0,0,.10);
+
+    --shadow-lg:0 8px 24px rgba(0,0,0,.12);
+
+
+
+    /* ===========================
+       Font
+    =========================== */
+
+    --font-xs:12px;
+
+    --font-sm:14px;
+
+    --font-md:16px;
+
+    --font-lg:20px;
+
+    --font-xl:28px;
+
+
+
+    /* ===========================
+       Space
+    =========================== */
+
+    --space-xs:4px;
+
+    --space-sm:8px;
+
+    --space-md:16px;
+
+    --space-lg:24px;
+
+    --space-xl:32px;
+
+
+
+    /* ===========================
+       Animation
+    =========================== */
+
+    --transition:0.2s ease;
+
+
+
+    /* ===========================
+       Z-index
+    =========================== */
+
+    --z-header:1000;
+
+    --z-search:900;
+
+    --z-cart:2000;
+
+    --z-modal:3000;
+
+}

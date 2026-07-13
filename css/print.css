@@ -1,0 +1,179 @@
+/* ==========================================
+   Print Layout
+========================================== */
+
+@media print{
+
+    /* ===============================
+       Page
+    =============================== */
+
+    @page{
+
+        size:A4;
+
+        margin:15mm;
+
+    }
+
+    body{
+
+        background:white;
+
+        color:black;
+
+        font-size:11pt;
+
+    }
+
+
+    /* ===============================
+       Hide
+    =============================== */
+
+    #tabs,
+
+    button,
+
+    .search-button,
+
+    .pagination,
+
+    .autocomplete-list,
+
+    input[type="checkbox"],
+
+    .no-print{
+
+        display:none !important;
+
+    }
+
+
+    /* ===============================
+       Layout
+    =============================== */
+
+    #header{
+
+        position:static;
+
+        border:none;
+
+        box-shadow:none;
+
+        padding:0;
+
+        margin-bottom:10mm;
+
+    }
+
+    #searchPanel{
+
+        margin:0 0 8mm 0;
+
+        padding:0;
+
+        box-shadow:none;
+
+        border:none;
+
+    }
+
+    #resultArea{
+
+        margin:0;
+
+    }
+
+
+    /* ===============================
+       Search Condition
+    =============================== */
+
+    .search-grid{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:4mm;
+
+    }
+
+    .search-item{
+
+        page-break-inside:avoid;
+
+    }
+
+
+    /* ===============================
+       Result Card
+    =============================== */
+
+    .result-card{
+
+        border:1px solid #ccc;
+
+        box-shadow:none;
+
+        margin-bottom:6mm;
+
+        page-break-inside:avoid;
+
+        break-inside:avoid;
+
+    }
+
+    .result-header{
+
+        margin-bottom:4mm;
+
+    }
+
+
+    /* ===============================
+       Footer
+    =============================== */
+
+    .print-footer{
+
+        position:fixed;
+
+        bottom:0;
+
+        left:0;
+
+        width:100%;
+
+        text-align:center;
+
+        font-size:9pt;
+
+        color:#666;
+
+        border-top:1px solid #999;
+
+        padding-top:3mm;
+
+    }
+
+
+    /* ===============================
+       Page Number
+    =============================== */
+
+    .page-number{
+
+        position:fixed;
+
+        bottom:0;
+
+        right:0;
+
+        font-size:9pt;
+
+    }
+
+}
