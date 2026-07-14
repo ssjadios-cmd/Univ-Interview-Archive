@@ -147,7 +147,7 @@ function buildUnifiedPrintHTML(items) {
 <html>
 <head>
 <meta charset="utf-8">
-<title>면접 자료 인쇄</title>
+<title> </title>
 <style>
     @page { margin: 12mm 15mm; }
     body { font-family: "맑은 고딕", sans-serif; font-size: 10.5pt; line-height: 1.5; margin: 0; padding: 0; }
@@ -197,6 +197,11 @@ function buildUnifiedPrintHTML(items) {
         `;
     });
 
-    html += `</body></html>`;
+    html += `
+        <div class="print-footer">
+            공교육을 위한 자료이며 무단 사용 및 복제를 금합니다.
+        </div>
+        </body>
+        </html>`;
     return html;
 }
