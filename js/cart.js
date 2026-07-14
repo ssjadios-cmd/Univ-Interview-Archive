@@ -345,7 +345,8 @@ function getSelectedCartItems(){
 
 
 /* ==========================================
-   7. 인쇄 기능 구현 (1케이스 1페이지 완전 제어)
+   Jin's comments : 이전 방식 인쇄 기능, 처음 방식이라 iframe이 아니고 새로운 탭을 띄우는 방식
+   아래에 일부만 수정하였음
 ========================================== */
 window.printCart = function() {
     const checkboxes = document.querySelectorAll(".cartCheck:checked");
@@ -429,19 +430,30 @@ window.printCart = function() {
 
     html += `</body></html>`;
 
-    const printWindow = window.open("", "_blank");
-    if (!printWindow) {
-        alert("팝업 차단을 해제해 주세요.");
-        return;
-    }
-    printWindow.document.write(html);
-    printWindow.document.close();
-    setTimeout(function() {
-        printWindow.print();
-        printWindow.close();
-    }, 250);
+
+    
+
+// 이곳에서부터 일부 수정 새로운 탭이 열리는 방식에서 iframe 방식으로 
+
+//     const printWindow = window.open("", "_blank");
+//     if (!printWindow) {
+//         alert("팝업 차단을 해제해 주세요.");
+//         return;
+//     }
+//     printWindow.document.write(html);
+//     printWindow.document.close();
+//     setTimeout(function() {
+//         printWindow.print();
+//         printWindow.close();
+//     }, 250);
+// };
+
+
+
+
+openPrintWindow(html);
 };
+
 
 // 예전 구버전 함수 바인딩 호환성 매핑 우회 레이어 제공
 window.renderCart = function() { window.renderCartPage(); };
-

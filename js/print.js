@@ -198,10 +198,10 @@ function buildUnifiedPrintHTML(items) {
     });
 
     html += `
-        <div class="print-footer">
-            공교육을 위한 자료이며 무단 사용 및 복제를 금합니다.
-        </div>
-        </body>
-        </html>`;
+    <div class="print-footer">
+        공교육을 위한 자료이며 무단 사용 및 복제를 금합니다.
+    </div>
+    </body>
+    </html>`;
     return html;
 }

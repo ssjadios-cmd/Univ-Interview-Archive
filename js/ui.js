@@ -359,20 +359,30 @@ function clearResult() {
     if (list) list.innerHTML = createEmptyResult();
 }
 
+/* ==========================================
+   연도 선택창 초기화
+========================================== */
 function initializeYearSelect() {
-    if (!CONFIG || !CONFIG.QUESTION_FILES) return;
-    const lastFile = CONFIG.QUESTION_FILES[CONFIG.QUESTION_FILES.length - 1];
-    const maxYear = parseInt(lastFile.match(/\d+/)[0]) || (new Date().getFullYear() + 1);
-    const startYear = CONFIG.START_YEAR || 2000; 
+    const selectIds = [
+        "qStartYear",
+        "qEndYear",
+        "cStartYear",
+        "cEndYear"
+    ];
 
-    ["qStartYear", "qEndYear", "cStartYear", "cEndYear"].forEach(id => {
+    selectIds.forEach(id => {
         const select = document.getElementById(id);
+
+        // 현재 화면에 해당 요소가 없으면 건너뜀
         if (!select) return;
 
-        select.innerHTML = "";
-        select.add(new Option("전체", ""));
-        for (let year = maxYear; year >= startYear; year--) {
-            select.add(new Option(year, year));
+        select.innerHTML = `<option value="">전체</option>`;
+
+        for (let year = CONFIG.END_YEAR; year >= CONFIG.START_YEAR; year--) {
+            const option = document.createElement("option");
+            option.value = String(year);
+            option.textContent = `${year}년`;
+            select.appendChild(option);
         }
     });
 }

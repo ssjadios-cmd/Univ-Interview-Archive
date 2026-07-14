@@ -13,6 +13,17 @@ const CONFIG = {
 
     VERSION : "2.0.1",
 
+      /* ===========================
+         Access Period
+      =========================== */
+
+      // 마지막으로 사용할 수 있는 날짜
+      EXPIRE_DATE : "2026-12-31",
+
+      // 만료 후 표시할 안내 문구
+      EXPIRE_MESSAGE :
+         "이 웹앱의 사용 기간이 종료되었습니다. 관리자에게 문의해 주세요.",
+
     SCHOOL_NAME : "대구고",
 
     COPYRIGHT :
@@ -66,23 +77,7 @@ CASE_PATH : "./data/Case/",
 
     QUESTION_FILES : [
 
-        "Question_2009.csv",
-        "Question_2010.csv",
-        "Question_2011.csv",
-        "Question_2012.csv",
-        "Question_2013.csv",
-        "Question_2014.csv",
-        "Question_2015.csv",
-        "Question_2016.csv",
-        "Question_2017.csv",
-        "Question_2018.csv",
-        "Question_2019.csv",
-        "Question_2020.csv",
-        "Question_2021.csv",
-        "Question_2022.csv",
-        "Question_2023.csv",
-        "Question_2024.csv",
-        "Question_2025.csv",
+        "preguntas.csv",
 
     ],
 
@@ -92,17 +87,7 @@ CASE_PATH : "./data/Case/",
 
     CASE_FILE :  [
 
-        "Case_2015.csv",
-        "Case_2016.csv",
-        "Case_2017.csv",
-        "Case_2018.csv",
-        "Case_2019.csv",
-        "Case_2020.csv",
-        "Case_2021.csv",
-        "Case_2022.csv",
-        "Case_2023.csv",
-        "Case_2024.csv",
-        "Case_2025.csv",
+        "casos.csv",
 
     ],
     /* ===========================
