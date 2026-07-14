@@ -24,12 +24,12 @@ async function loadQuestionData() {
                 Question.data.push(row);
             });
 
-            console.log(file + " Loaded"); // 중복 출력 제거
+            // console.log(file + " Loaded"); // 중복 출력 제거
         } catch (error) {
             console.warn(file + " Missing");
         }
     }
-    console.log("Question Loaded :", Question.data.length);
+    // console.log("Question Loaded :", Question.data.length);
 }
 
 /* ==========================================
@@ -209,11 +209,16 @@ function goQuestionPage(page) {
     renderQuestionPage();
 }
 
+/* ==========================================
+   Reset Search Conditions
+========================================== */
+function resetSearchConditions() {
+    console.log("resetSearchConditions()");
 
-function resetQuestionConditions() {
-    console.log("resetQuestionConditions()");
-
-    ["qUniversity", "qMajor", "qAdmission", "qKeyword"].forEach(id => {
+    // 💡 질문 탭에 해당하는 필드만 깔끔하게 초기화합니다.
+    // (케이스 검색 관련 초기화 코드는 해당 케이스 js 파일이나 app.js로 이관하는 것을 권장합니다)
+    const inputs = ["qUniversity", "qMajor", "qAdmission", "qKeyword"];
+    inputs.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.value = "";
     });
@@ -222,13 +227,13 @@ function resetQuestionConditions() {
 
     Question.filtered = [];
     Question.currentPage = 1;
-
     if (typeof clearResult === "function") clearResult();
     if (typeof initializeFocus === "function") initializeFocus();
-    if (typeof window.toggleSearchPanel === "function") window.toggleSearchPanel(true);
+
+    if (typeof window.toggleSearchPanel === "function") {
+        window.toggleSearchPanel(true);
+    }
 }
-
-
 
 /* ==========================================
    Cart & Print Functions
