@@ -197,7 +197,7 @@ function initializeSearchPanelEvents() {
         if (currentMode === "case") {
             if (typeof resetCaseConditions === "function") resetCaseConditions();
         } else {
-            if (typeof resetQuestionConditions === "function") resetQuestionConditions();
+            if (typeof resetSearchConditions === "function") resetSearchConditions();
         }
     });
 

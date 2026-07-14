@@ -147,7 +147,7 @@ function buildUnifiedPrintHTML(items) {
 <html>
 <head>
 <meta charset="utf-8">
-<title> </title>
+<title> Daegu Highschool Univ_Interview Archive </title>
 <style>
     @page { margin: 12mm 15mm; }
     body { font-family: "맑은 고딕", sans-serif; font-size: 10.5pt; line-height: 1.5; margin: 0; padding: 0; }

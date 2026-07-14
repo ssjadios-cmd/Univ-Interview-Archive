@@ -133,6 +133,22 @@
     }
 
 
+        /* ===============================
+        Top Right Title
+        =============================== */
+
+        .print-top-right {
+            position: fixed;
+            top: 0;
+            right: 0;
+
+            font-size: 8.5pt;
+            color: #666;
+            text-align: right;
+            line-height: 1.4;
+        }
+
+
     /* ===============================
        Footer
     =============================== */
