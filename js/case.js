@@ -55,7 +55,7 @@ async function loadCaseData() {
         }
     }
     
-    console.log(`🎯 [디버그 7] 총 합산 원본 데이터(Case.allData) 개수: ${Case.allData.length}건`);
+    console.log(`🎯 총 합산 원본 데이터(Case.allData) 개수: ${Case.allData.length}건`);
     groupCaseData(Case.allData);
 }
 
@@ -104,7 +104,7 @@ function groupCaseData(rawData) {
         return item;
     });
     
-    console.log(`📦 [디버그 8] 최종 그룹화 완료 (Case.grouped): ${Case.grouped.length}개의 사례 묶음 생성 완료`);
+    console.log(`📦 최종 그룹화 완료 (Case.grouped): ${Case.grouped.length}개의 사례 묶음 생성 완료`);
 }
 
 
