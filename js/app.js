@@ -107,9 +107,14 @@ async function init() {
     // UI 생성 및 이벤트 바인딩 (즉시 완료됨)
     createLayout();
     initializeUI();
+    initializeAdmissionTypeSelect();
     initializeYearSelect();
-    initializeAutocomplete();
-    // initializeSearchButton();
+    
+    if (CONFIG.USE_AUTOCOMPLETE) {
+            initializeAutocomplete();
+        }    
+    
+        // initializeSearchButton();
     // initializeEnterSearch();
     initializeFocus();
 
@@ -153,8 +158,9 @@ async function loadAllDataInBackground() {
         console.error("💥 Case 로드 실패:", error);
     }
     
-        buildAutocompleteData();
-
+        if (CONFIG.USE_AUTOCOMPLETE) {
+            buildAutocompleteData();
+}
     console.log("✅ [백그라운드] 모든 데이터 준비 완료. 이제 검색이 가능합니다.");
 
     

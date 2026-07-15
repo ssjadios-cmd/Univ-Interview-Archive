@@ -102,4 +102,7 @@ CASE_PATH : "./data/Case/",
 
    //      "Major.csv"
 
+USE_AUTOCOMPLETE : false
+
 };
+
