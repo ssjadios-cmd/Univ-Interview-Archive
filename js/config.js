@@ -102,7 +102,20 @@ CASE_PATH : "./data/Case/",
 
    //      "Major.csv"
 
-USE_AUTOCOMPLETE : false
+
+
+    ADMISSION_TYPES: [
+    "교과",
+    "종합",
+    "면접",
+    "실기"
+   ],
+
+
+   USE_AUTOCOMPLETE : false
+
+
+
 
 };
 

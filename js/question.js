@@ -39,7 +39,7 @@ function getQuestionCondition() {
     return {
         university: document.getElementById("qUniversity")?.value.trim() || "",
         major: document.getElementById("qMajor")?.value.trim() || "",
-        admission: document.getElementById("qAdmission")?.value.trim() || "",
+        admission: document.getElementById("qAdmissionType")?.value.trim() || "",
         startYear: document.getElementById("qStartYear")?.value || "",
         endYear: document.getElementById("qEndYear")?.value || "",
         keyword: document.getElementById("qKeyword")?.value.trim() || ""
@@ -56,7 +56,10 @@ function searchQuestion() {
     Question.filtered = Question.data.filter(row => {
         if (condition.university && !contains(row.대학명, condition.university)) return false;
         if (condition.major && !contains(row.모집단위, condition.major)) return false;
-        if (condition.admission && !contains(row.전형명, condition.admission)) return false;
+        if (condition.admissionType &&
+                row.전형종류 !== condition.admissionType
+            )
+                return false;
 
         const year = Number(row.대입연도);
         if (condition.startYear && year < Number(condition.startYear)) return false;
@@ -217,7 +220,7 @@ function resetSearchConditions() {
 
     // 💡 질문 탭에 해당하는 필드만 깔끔하게 초기화합니다.
     // (케이스 검색 관련 초기화 코드는 해당 케이스 js 파일이나 app.js로 이관하는 것을 권장합니다)
-    const inputs = ["qUniversity", "qMajor", "qAdmission", "qKeyword"];
+    const inputs = ["qUniversity", "qMajor", "qAdmissionType", "qKeyword"];
     inputs.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.value = "";

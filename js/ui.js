@@ -114,7 +114,7 @@ function createQuestionSearch() {
         <div class="search-grid">
             <div class="search-item"><label>대학명</label><input id="qUniversity" autocomplete="off"></div>
             <div class="search-item"><label>모집단위</label><input id="qMajor" autocomplete="off"></div>
-            <div class="search-item"><label>전형명</label><input id="qAdmission"></div>
+            <div class="search-item"><label>전형명</label><input id="qAdmissionType"></div>
             <div class="search-item"><label>키워드</label><input id="qKeyword"></div>
             <div class="search-item"><label>시작연도</label><select id="qStartYear"></select></div>
             <div class="search-item"><label>종료연도</label><select id="qEndYear"></select></div>
@@ -358,6 +358,28 @@ function clearResult() {
     if (summary) summary.innerHTML = "검색을 시작하세요.";
     if (list) list.innerHTML = createEmptyResult();
 }
+
+
+
+
+function initializeAdmissionTypeSelect() {
+
+    const select = document.getElementById("qAdmissionType");
+
+    if (!select) return;
+
+    select.innerHTML = "";
+
+    select.add(new Option("전체", ""));
+
+    (CONFIG.ADMISSION_TYPES || []).forEach(type => {
+        select.add(new Option(type, type));
+    });
+
+}
+
+
+
 
 /* ==========================================
    연도 선택창 초기화
