@@ -109,19 +109,47 @@ function createSearchPanel() {
     return panel;
 }
 
+
 function createQuestionSearch() {
     return `
         <div class="search-grid">
-            <div class="search-item"><label>대학명</label><input id="qUniversity" autocomplete="off"></div>
-            <div class="search-item"><label>모집단위</label><input id="qMajor" autocomplete="off"></div>
-            <div class="search-item"><label>전형명</label><input id="qAdmissionType"></div>
-            <div class="search-item"><label>키워드</label><input id="qKeyword"></div>
-            <div class="search-item"><label>시작연도</label><select id="qStartYear"></select></div>
-            <div class="search-item"><label>종료연도</label><select id="qEndYear"></select></div>
+            <div class="search-item">
+                <label>대학명</label>
+                <input id="qUniversity" autocomplete="off">
+            </div>
+
+            <div class="search-item">
+                <label>모집단위</label>
+                <input id="qMajor" autocomplete="off">
+            </div>
+
+            <div class="search-item">
+                <label>전형종류</label>
+                <select id="qAdmissionType"></select>
+            </div>
+
+            <div class="search-item">
+                <label>키워드</label>
+                <input id="qKeyword">
+            </div>
+
+            <div class="search-item">
+                <label>시작연도</label>
+                <select id="qStartYear"></select>
+            </div>
+
+            <div class="search-item">
+                <label>종료연도</label>
+                <select id="qEndYear"></select>
+            </div>
         </div>
-        <div class="search-button"><button id="questionSearchBtn">Question 검색</button></div>
+
+        <div class="search-button">
+            <button id="questionSearchBtn">Question 검색</button>
+        </div>
     `;
 }
+
 
 function createCaseSearch() {
     return `

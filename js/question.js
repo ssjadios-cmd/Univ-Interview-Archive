@@ -39,7 +39,11 @@ function getQuestionCondition() {
     return {
         university: document.getElementById("qUniversity")?.value.trim() || "",
         major: document.getElementById("qMajor")?.value.trim() || "",
-        admission: document.getElementById("qAdmissionType")?.value.trim() || "",
+
+        // 전형종류 콤보박스
+        admissionType:
+            document.getElementById("qAdmissionType")?.value.trim() || "",
+
         startYear: document.getElementById("qStartYear")?.value || "",
         endYear: document.getElementById("qEndYear")?.value || "",
         keyword: document.getElementById("qKeyword")?.value.trim() || ""
@@ -52,7 +56,7 @@ function getQuestionCondition() {
 function searchQuestion() {
     console.log("searchQuestion()");
     const condition = getQuestionCondition();
-
+    
     Question.filtered = Question.data.filter(row => {
         if (condition.university && !contains(row.대학명, condition.university)) return false;
         if (condition.major && !contains(row.모집단위, condition.major)) return false;
