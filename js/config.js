@@ -36,7 +36,7 @@ const CONFIG = {
 
     START_YEAR : 2009,
 
-    END_YEAR : 2025,  
+    END_YEAR : 2026,  
 
 
     MAX_SEARCH_RESULT : 1000,
