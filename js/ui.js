@@ -27,17 +27,20 @@ window.createLayout = function() {
 function createHeader() {
     const header = document.createElement("header");
     header.id = "header";
+
     const today = new Date();
     const dateString = `${today.getFullYear()}.${String(today.getMonth() + 1).padStart(2, "0")}.${String(today.getDate()).padStart(2, "0")}`;
 
     header.innerHTML = `
-        <div>
+        <div class="header-title">
             <h1>${CONFIG.APP_NAME}</h1>
+            <span class="header-creator">Made by 서상진</span>
         </div>
         <div style="text-align:right; font-size:13px; color:#666;">
             Version ${CONFIG.VERSION}<br>${dateString}
         </div>
     `;
+
     return header;
 }
 

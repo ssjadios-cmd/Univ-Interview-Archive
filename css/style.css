@@ -84,6 +84,40 @@ body{
 
 }
 
+/* 헤더 제목과 제작자 표기 */
+#header .header-title {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    min-width: 0;
+}
+
+#header .header-title h1 {
+    margin: 0;
+}
+
+#header .header-creator {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-secondary, #777);
+    white-space: nowrap;
+}
+
+/* 모바일 화면 대응 */
+@media (max-width: 600px) {
+    #header {
+        padding: 0 var(--space-md, 12px);
+    }
+
+    #header .header-title {
+        gap: 6px;
+    }
+
+    #header .header-creator {
+        font-size: 11px;
+    }
+}
+
 
 /* ==========================================
    Tabs
